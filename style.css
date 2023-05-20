@@ -1,0 +1,101 @@
+
+html {
+    min-height: 100%;
+    scroll-behavior: smooth;
+}
+body{
+    background-image: linear-gradient(#7efbff,#ffffff, #28e9f0); 
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.hidden{
+    display: none;
+}
+.container{
+    margin-left:auto;
+    margin-right:auto;
+    width: 80%;
+}
+.head {
+    margin: 20px auto;
+    color: black;
+    font-size: 36px;
+    text-align: center;
+}
+table {
+    border-collapse: collapse;
+    border: 5px solid #2172b5;
+    width: 100%;
+}
+th, td {
+    padding: 10px;
+    border: 3px solid #ffffff;
+}
+th {
+    background-color: #2172b5;
+    color: white;
+}
+tr {
+    background-color: #80c9ed
+}
+tr:hover{
+    background-color: aquamarine;
+}
+
+.price, .name{
+    text-align: center;
+}
+.price {
+    color: #5e23bd
+}
+
+.searchContainer{
+    margin: 20px auto;
+    width: 60%;
+    text-align: start;
+    font-size: 24px;
+}
+
+.search {
+    font-size: 24px;
+    border: 3px solid #2172b5;
+    width: 100%;
+}
+
+input {outline: 0 !important;}
+.search:focus, .filter:focus {
+    border-color: #00ffff;
+    box-shadow: 0 0 6px 3px rgb(247, 255, 128)
+}
+.filter{
+    cursor: pointer;
+}
+
+.notFound {
+    font-size: 42px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.upButton {
+    position: fixed;
+    z-index: 1;
+    bottom: 50px;
+    right: 20px;
+    width: 64px;
+    height: 64px;
+    font-size: 36px;
+    text-align: center;
+    vertical-align: middle;
+    border: 5px solid #2172b5;
+    border-radius: 50%;
+    color: #2172b5;
+    background-color: rgba(127, 255, 212, 0.466);
+    cursor: pointer;
+  }
+  .upButton:hover {
+    color: #3989ca;
+    background-color: rgba(98, 247, 189, 0.644);
+    border-color: #3989ca;
+  }
+
