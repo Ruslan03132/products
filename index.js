@@ -23,11 +23,11 @@ searchNames.oninput = function(){
     // Пробегаемся по строкам таблицы циклом
     for (let row of [...rows]){ // используем оператор sphread для приведения NodeList к array
         let name = row.querySelector(".name").textContent.toLowerCase();  // достаем из строки имя товара и приводим к нижнему регистру
-        if (name.includes(searchNames.value.toLowerCase())){ //Проверяем наличие подстроки поиска в строке имени товара
+        if (name.includes(searchNames.value.toLowerCase())){ //Проверяем наличие введеной подстроки поиска в строке имени товара
             row.classList.remove("hidden"); // Если нашли, удаляем класс, скрывающий строку из DOM дерева
             found = true; // Если хотя бы 1 строка найдена, то скрываем подсказку
         } else {
-            row.classList.add("hidden"); // Если нашли, добавляем
+            row.classList.add("hidden"); // Если не нашли, добавляем
         }
 
     }
@@ -45,7 +45,7 @@ filter.onchange = function(){
     // сортируем строки товаров и записываем результат в переменную
     let rowsSort = [...rows].sort((a, b) => {
         // создаем переменные для сортировки и присваиваем им соответствующие значения из строк
-        let a_price = a.querySelector(".price").innerHTML.split(" ")[0];// разбиваем строку цены на массив из 2 строк и достаем первый элемент (цифры)
+        let a_price = a.querySelector(".price").innerHTML.split(" ")[0];// разбиваем строку цены на массив из 2 строк и достаем первый элемент (отбрасываем рубли)
         let b_price = b.querySelector(".price").innerHTML.split(" ")[0];
         let a_id = a.querySelector(".id").innerHTML;
         let b_id = b.querySelector(".id").innerHTML;
